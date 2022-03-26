@@ -1,28 +1,23 @@
 const mongoose = require('mongoose');
 
 var userSchema = new mongoose.Schema({
-    fullName : {
-        type: String
-    },
+    fullName : String,
     email : {
-        type: String
+        type: String,
+        required: [true, 'Email field is required']
     },
     password : {
-        type: String
+        type: String,
+        required: [true, 'Password field is required']
     },
-    gender : {
-        type: String
+    gender : String,
+    dob : Date,
+    mobileNumber: {
+        type: String,
+        required: [true, 'Mobile field is required']
+
     },
-    dob : {
-        type: Date
-    },
-    mobileNumber : {
-        type: String
-    },
-    signUpType: {
-        type: String
-    }
-    
+    signUpType: String
 }); 
 
-mongoose.model('User', userSchema); 
+mongoose.model('User', userSchema);

@@ -43,7 +43,7 @@ function insertUser(req, res){
             newUser.save((err, doc) => {
                 if(!err){
                     var response = {
-                        status: 100,
+                        status: 200,
                         message: "Registered successfully."
                     }
                     res.json(response);
