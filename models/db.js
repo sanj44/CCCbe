@@ -5,3 +5,5 @@ mongoose.connect('mongodb+srv://aditya:vercel@surveydb.lkwaz.mongodb.net/cccdb?r
 });
 
 require('./user.model');
+require('./intiative.model');
+require('./crisis.model');

@@ -1,25 +1,26 @@
 const mongoose = require('mongoose');
+
 mongoose.SchemaTypeOptions
 var initiativeSchema = new mongoose.Schema({
     userId: {
-        type: String,
-        required: true,
+        type: String
     },
-    name : String,
-    Crisis : {
+    name: String,
+    crisis: {
         _id: String,
         name: String,
         tags: [String],
         details: String
     },
     volunteersRequired: Number,
-    description?: String,
+    description: String,
     metaData: {
         dateInitiated: Date,
         dateModified: Date,
         createdBy: String
     },
-    signedUpVlunteers: [String]
-}); 
+    signedUpVolunteers: [String],
+    tags: [String]
+});
 
-mongoose.model('Initiatives', initiativeSchema); 
+mongoose.model('Initiative', initiativeSchema);
