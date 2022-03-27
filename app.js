@@ -4,8 +4,8 @@ const express = require('express');
 const bodyParser = require('body-parser')
 const userController = require('./controllers/userController');
 const initiativeController = require('./controllers/initiativeController');
-const swaggerUi = require('swagger-ui-express');
-const swaggerDocument = require('./swagger.json');
+// const swaggerUi = require('swagger-ui-express');
+// const swaggerDocument = require('./swagger.json');
 
 var app = express();
 app.use(bodyParser.json())
@@ -19,6 +19,6 @@ app.use('/initiative', initiativeController);
 
 app.get('/', (req, res) => res.send('Home Page Route'));
 
-app.use('/api-docs', swaggerUi.serve);
+// app.use('/api-docs', swaggerUi.serve);
 
-app.get('/api-docs', swaggerUi.setup(swaggerDocument));
+// app.get('/api-docs', swaggerUi.setup(swaggerDocument));
